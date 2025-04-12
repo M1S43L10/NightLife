@@ -4,221 +4,293 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Galería - NightLife</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Estilos personalizados -->
     <link href="../styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
 
-  <body>
-    <nav id="navbar">
-      <div class="nav-container">
-        <h2>
-          <a class="nav-logo" href="../index.html"> NightLife </a>
-        </h2>
-        <ul class="nav-list">
-          <li>
-            <a class="nav-link" href="../index.html"> Home </a>
-          </li>
-          <li>
-            <a class="nav-link" href="about-us.html"> Nosotros </a>
-          </li>
-          <li>
-            <a class="nav-link" href="events.html"> Eventos </a>
-          </li>
-          <li>
-            <a class="nav-link active" href="gallery.html"> Galería </a>
-          </li>
-          <li>
-            <a class="nav-link" href="faq.html"> FAQ </a>
-          </li>
-          <li>
-            <a class="nav-link" href="contact.html"> Contáctanos </a>
-          </li>
-        </ul>
-        <div class="sesion-container">
-          <a class="sesion-button signup" href="#"> Sign Up </a>
-          <a class="sesion-button login" href="#"> Login </a>
+  <body class="bg-dark text-white">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-warning"
+          href="#">NightLife</a>
+
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div
+            class="w-100 d-flex justify-content-between align-items-center">
+
+            <!-- MENÚ CENTRADO -->
+            <ul class="navbar-nav mx-auto px-5">
+              <li class="nav-item"><a class="nav-link"
+                  href="../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link"
+                  href="about-us.html">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link"
+                  href="events.html">Eventos</a></li>
+              <li class="nav-item"><a class="nav-link active"
+                  href="gallery.html">Galería</a></li>
+              <li class="nav-item"><a class="nav-link"
+                  href="faq.html">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link"
+                  href="contact.html">Contáctanos</a></li>
+            </ul>
+
+            <!-- LOGIN / SIGNUP A LA DERECHA -->
+            <div class="d-flex gap-2">
+              <a href="login.html"
+                class="btn btn-nightlife">Login</a>
+              <a href="signup.html" class="btn btn-nightlife">Sign
+                Up</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
-    <section id="gallery">
-      <h1 class="section-title">Galería</h1>
-      <p class="section-text">
-        Revive los mejores momentos de nuestras fiestas con imágenes exclusivas.
-      </p>
-      <div class="gallery-images">
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img
-                alt="Fiesta con luces de neón"
-                src="../assets/gallery1.jpg"
-              />
-            </div>
-            <div class="flip-back">
-              <h3>Fiesta con luces de neón ✨</h3>
-              <p>Una noche inolvidable llena de energía.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="DJ en acción" src="../assets/gallery2.avif" />
-            </div>
-            <div class="flip-back">
-              <h3>DJ en acción 🎧</h3>
-              <p>Una noche inolvidable llena de energía.</p>
+
+    <!-- SECCIÓN GALERÍA -->
+    <section id="gallery" class="py-5 text-center">
+      <div class="container">
+        <h2 class="section-title">Galería</h2>
+        <p class="section-text">Revive los mejores momentos de nuestras fiestas
+          con imágenes exclusivas.</p>
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- Tarjetas Flip (12) -->
+          <!-- Cada .flip-card va dentro de col-* -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery1.jpg"
+                    alt="Fiesta con luces de neón" />
+                </div>
+                <div class="flip-back">
+                  <h3>Fiesta con luces de neón ✨</h3>
+                  <p>Una noche inolvidable llena de energía.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="Pista de baile" src="../assets/gallery3.jpeg" />
-            </div>
-            <div class="flip-back">
-              <h3>Pista de baile llena 🔥</h3>
-              <p>Una noche inolvidable llena de energía.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="Show de luces" src="../assets/gallery4.jpg" />
-            </div>
-            <div class="flip-back">
-              <h3>Increíble show de luces 🎆</h3>
-              <p>Una noche inolvidable llena de energía.</p>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery2.avif" alt="DJ en acción" />
+                </div>
+                <div class="flip-back">
+                  <h3>DJ en acción 🎧</h3>
+                  <p>Una noche inolvidable llena de energía.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="Ambiente festivo" src="../assets/gallery5.jpg" />
-            </div>
-            <div class="flip-back">
-              <h3>Ambiente festivo y diversión 🍾</h3>
-              <p>Una noche inolvidable llena de energía.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img
-                alt="Personas disfrutando la fiesta"
-                src="../assets/gallery6.jpg"
-              />
-            </div>
-            <div class="flip-back">
-              <h3>Personas disfrutando la fiesta 🕺💃</h3>
-              <p>Una noche inolvidable llena de energía.</p>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery3.jpeg" alt="Pista de baile" />
+                </div>
+                <div class="flip-back">
+                  <h3>Pista de baile llena 🔥</h3>
+                  <p>Una noche inolvidable llena de energía.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="Explosión de beats 🎧" src="../assets/gallery7.png" />
-            </div>
-            <div class="flip-back">
-              <h3>Explosión de beats 🎧</h3>
-              <p>Una noche encendida con luces pulsantes y un DJ al mando.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="Ritmo y conexión 💃🕺" src="../assets/gallery8.png" />
-            </div>
-            <div class="flip-back">
-              <h3>Ritmo y conexión 💃🕺</h3>
-              <p>Cuando la música une, todo lo demás desaparece.</p>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery4.jpg" alt="Show de luces" />
+                </div>
+                <div class="flip-back">
+                  <h3>Increíble show de luces 🎆</h3>
+                  <p>Una noche inolvidable llena de energía.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="Frecuencia total 🔊" src="../assets/gallery9.png" />
-            </div>
-            <div class="flip-back">
-              <h3>Frecuencia total 🔊</h3>
-              <p>Cada mezcla es una obra de arte hecha en tiempo real.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="Momentos NightLife ✨" src="../assets/gallery10.png" />
-            </div>
-            <div class="flip-back">
-              <h3>Momentos NightLife ✨</h3>
-              <p>Cuatro visiones, una energía: fiesta, amor, ritmo y magia.</p>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery5.jpg" alt="Ambiente festivo" />
+                </div>
+                <div class="flip-back">
+                  <h3>Ambiente festivo y diversión 🍾</h3>
+                  <p>Una noche inolvidable llena de energía.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img
-                alt="El poder del escenario 🔥"
-                src="../assets/gallery11.png"
-              />
-            </div>
-            <div class="flip-back">
-              <h3>El poder del escenario 🔥</h3>
-              <p>Un mar de manos alzadas y emoción al máximo.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="flip-front">
-              <img alt="Vibra acústica 🎸" src="../assets/gallery12.png" />
-            </div>
-            <div class="flip-back">
-              <h3>Vibra acústica 🎸</h3>
-              <p>
-                Una experiencia auténtica con talento en vivo y luces íntimas.
-              </p>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery6.jpg"
+                    alt="Personas disfrutando la fiesta" />
+                </div>
+                <div class="flip-back">
+                  <h3>Personas disfrutando la fiesta 🕺💃</h3>
+                  <p>Una noche inolvidable llena de energía.</p>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery7.png"
+                    alt="Explosión de beats 🎧" />
+                </div>
+                <div class="flip-back">
+                  <h3>Explosión de beats 🎧</h3>
+                  <p>Una noche encendida con luces pulsantes y un DJ al
+                    mando.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery8.png"
+                    alt="Ritmo y conexión 💃🕺" />
+                </div>
+                <div class="flip-back">
+                  <h3>Ritmo y conexión 💃🕺</h3>
+                  <p>Cuando la música une, todo lo demás desaparece.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery9.png" alt="Frecuencia total 🔊" />
+                </div>
+                <div class="flip-back">
+                  <h3>Frecuencia total 🔊</h3>
+                  <p>Cada mezcla es una obra de arte hecha en tiempo real.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery10.png"
+                    alt="Momentos NightLife ✨" />
+                </div>
+                <div class="flip-back">
+                  <h3>Momentos NightLife ✨</h3>
+                  <p>Fiesta, amor, ritmo y magia en una sola imagen.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery11.png"
+                    alt="El poder del escenario 🔥" />
+                </div>
+                <div class="flip-back">
+                  <h3>El poder del escenario 🔥</h3>
+                  <p>Un mar de manos alzadas y emoción al máximo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="flip-card">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <img src="../assets/gallery12.png" alt="Vibra acústica 🎸" />
+                </div>
+                <div class="flip-back">
+                  <h3>Vibra acústica 🎸</h3>
+                  <p>Una experiencia íntima con talento en vivo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
-    
-    <footer id="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <h2>NightLife</h2>
-                    <p>La mejor experiencia nocturna de tu ciudad.</p>
-                </div>
-        
-                <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../pages/events.html">Eventos</a></li>
-                        <li><a href="../pages/gallery.html">Galería</a></li>
-                        <li><a href="../pages/contact.html">Contáctanos</a></li>
-                    </ul>
-                </div>
-        
-                <div class="footer-social">
-                    <h4>Seguinos</h4>
-                    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
-                    <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
-                    <a href="#"><i class="fab fa-tiktok"></i>TikTok</a>
-                </div>  
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5 class="text-primary">NightLife</h5>
+            <p>La mejor experiencia nocturna de tu ciudad.</p>
+          </div>
+          <div class="col-md-4">
+            <h6 class="text-warning text-uppercase">Enlaces rápidos</h6>
+            <ul class="list-unstyled">
+              <li><a href="../index.html"
+                  class="text-white text-decoration-none">Inicio</a></li>
+              <li><a href="events.html"
+                  class="text-white text-decoration-none">Eventos</a></li>
+              <li><a href="contact.html"
+                  class="text-white text-decoration-none">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6 class="text-warning text-uppercase">Redes</h6>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white fs-5"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white fs-5"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white fs-5"><i
+                  class="fab fa-tiktok"></i></a>
             </div>
-            <div class="footer-copy">
-                <p>&copy; 2025 Fiesta Nocturna - Todos los derechos reservados.</p>
-            </div>
-        </footer>
+          </div>
+        </div>
+        <div class="text-center pt-4 border-top mt-4">
+          <p class="mb-0">&copy; 2025 Fiesta Nocturna - Todos los derechos
+            reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

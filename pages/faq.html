@@ -4,99 +4,194 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Preguntas Frecuentes - NightLife</title>
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <!-- Estilos personalizados -->
         <link rel="stylesheet" href="../styles.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
-    <body>
-        <nav id="navbar">
-            <div class="nav-container">
-                <h2><a class="nav-logo" href="../index.html">NightLife</a></h2>
-                <ul class="nav-list">
-                    <li><a class="nav-link" href="../index.html">Home</a></li>
-                    <li><a class="nav-link"
-                            href="about-us.html">Nosotros</a></li>
-                    <li><a class="nav-link" href="events.html">Eventos</a></li>
-                    <li><a class="nav-link" href="gallery.html">Galería</a></li>
-                    <li><a class="nav-link active" href="faq.html">FAQ</a></li>
-                    <li><a class="nav-link"
-                            href="contact.html">Contáctanos</a></li>
-                </ul>
-                <div class="sesion-container">
-                    <a href="#" class="sesion-button signup">Sign Up</a>
-                    <a href="#" class="sesion-button login">Login</a>
+
+    <body class="bg-dark text-white">
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-warning"
+                    href="#">NightLife</a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div
+                        class="w-100 d-flex justify-content-between align-items-center">
+
+                        <!-- MENÚ CENTRADO -->
+                        <ul class="navbar-nav mx-auto px-5">
+                            <li class="nav-item"><a class="nav-link"
+                                    href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="about-us.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="events.html">Eventos</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="gallery.html">Galería</a></li>
+                            <li class="nav-item"><a class="nav-link active"
+                                    href="faq.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="contact.html">Contáctanos</a></li>
+                        </ul>
+
+                        <!-- LOGIN / SIGNUP A LA DERECHA -->
+                        <div class="d-flex gap-2">
+                            <a href="login.html"
+                                class="btn btn-nightlife">Login</a>
+                            <a href="signup.html" class="btn btn-nightlife">Sign
+                                Up</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <section id="faq">
-            <h1 class="section-title">Preguntas Frecuentes</h1>
-            <p class="section-text">
-                Encuentra respuestas a las dudas más comunes sobre nuestros
-                eventos.
-            </p>
+        <!-- SECCIÓN FAQ -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h2 class="text-warning text-uppercase fw-bold mb-4">Preguntas
+                    Frecuentes</h2>
+                <p class="mb-4 opacity-75">¿Tenés dudas? Acá respondemos las más
+                    comunes sobre nuestros eventos.</p>
 
-            <article class="faq-item">
-                <h3 class="faq-question">¿Cuáles son los horarios de
-                    apertura?</h3>
-                <p class="faq-answer">
-                    Abrimos todos los viernes y sábados de 22:00 a 06:00.
-                </p>
-            </article>
+                <div class="accordion accordion-flush bg-dark"
+                    id="faqAccordion">
+                    <!-- Pregunta 1 -->
+                    <div class="accordion-item bg-black border-secondary">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed bg-black text-white"
+                                type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                ¿Cómo reservo mi entrada?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-white">
+                                Podés reservar tu entrada desde la sección de
+                                eventos haciendo clic en "Reservar Entrada".
+                            </div>
+                        </div>
+                    </div>
 
-            <article class="faq-item">
-                <h3 class="faq-question">¿Se necesita reserva previa?</h3>
-                <p class="faq-answer">
-                    No es obligatorio, pero recomendamos reservar para evitar
-                    filas.
-                </p>
-            </article>
+                    <!-- Pregunta 2 -->
+                    <div class="accordion-item bg-black border-secondary">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed bg-black text-white"
+                                type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                ¿Hay edad mínima para ingresar?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-white">
+                                Sí, es necesario tener al menos 18 años
+                                cumplidos y presentar DNI en el ingreso.
+                            </div>
+                        </div>
+                    </div>
 
-            <article class="faq-item">
-                <h3 class="faq-question">¿Cuáles son las medidas de
-                    seguridad?</h3>
-                <p class="faq-answer">
-                    Contamos con seguridad privada, control de acceso y medidas
-                    sanitarias.
-                </p>
-            </article>
+                    <!-- Pregunta 3 -->
+                    <div class="accordion-item bg-black border-secondary">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed bg-black text-white"
+                                type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                ¿Se pueden cancelar reservas?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-white">
+                                Las cancelaciones se aceptan hasta 24 horas
+                                antes del evento, desde tu cuenta o por contacto
+                                directo.
+                            </div>
+                        </div>
+                    </div>
 
-            <article class="faq-item">
-                <h3 class="faq-question">¿Se permite el acceso a menores de
-                    edad?</h3>
-                <p class="faq-answer">
-                    No, la entrada es exclusiva para mayores de 18 años con
-                    identificación.
-                </p>
-            </article>
+                    <!-- Pregunta 4 -->
+                    <div class="accordion-item bg-black border-secondary">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed bg-black text-white"
+                                type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                ¿Aceptan tarjetas o solo efectivo?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-white">
+                                Aceptamos tarjetas de crédito, débito, efectivo
+                                y MercadoPago dentro del evento.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <footer id="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <h2>NightLife</h2>
-                    <p>La mejor experiencia nocturna de tu ciudad.</p>
+        <!-- FOOTER -->
+        <footer class="bg-black text-white py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <h5 class="text-primary">NightLife</h5>
+                        <p>La mejor experiencia nocturna de tu ciudad.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-warning text-uppercase">Enlaces
+                            rápidos</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="../index.html"
+                                    class="text-white text-decoration-none">Inicio</a></li>
+                            <li><a href="events.html"
+                                    class="text-white text-decoration-none">Eventos</a></li>
+                            <li><a href="contact.html"
+                                    class="text-white text-decoration-none">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-warning text-uppercase">Redes</h6>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-white fs-5"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white fs-5"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white fs-5"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
                 </div>
-        
-                <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../pages/events.html">Eventos</a></li>
-                        <li><a href="../pages/gallery.html">Galería</a></li>
-                        <li><a href="../pages/contact.html">Contáctanos</a></li>
-                    </ul>
+                <div class="text-center pt-4 border-top mt-4">
+                    <p class="mb-0">&copy; 2025 Fiesta Nocturna - Todos los
+                        derechos reservados.</p>
                 </div>
-        
-                <div class="footer-social">
-                    <h4>Seguinos</h4>
-                    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
-                    <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
-                    <a href="#"><i class="fab fa-tiktok"></i>TikTok</a>
-                </div>  
-            </div>
-            <div class="footer-copy">
-                <p>&copy; 2025 Fiesta Nocturna - Todos los derechos reservados.</p>
             </div>
         </footer>
+
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

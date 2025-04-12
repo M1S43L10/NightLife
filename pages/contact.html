@@ -4,82 +4,167 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Contacto - NightLife</title>
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <!-- Estilos personalizados -->
         <link rel="stylesheet" href="../styles.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
-    <body>
-        <nav id="navbar">
-            <div class="nav-container">
-                <h2><a class="nav-logo" href="../index.html">NightLife</a></h2>
-                <ul class="nav-list">
-                    <li><a class="nav-link" href="../index.html">Home</a></li>
-                    <li><a class="nav-link"
-                            href="about-us.html">Nosotros</a></li>
-                    <li><a class="nav-link" href="events.html">Eventos</a></li>
-                    <li><a class="nav-link" href="gallery.html">Galería</a></li>
-                    <li><a class="nav-link" href="faq.html">FAQ</a></li>
-                    <li>
-                        <a class="nav-link active"
-                            href="contact.html">Contáctanos</a>
-                    </li>
-                </ul>
-                <div class="sesion-container">
-                    <a href="#" class="sesion-button signup">Sign Up</a>
-                    <a href="#" class="sesion-button login">Login</a>
+
+    <body class="bg-dark text-white">
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-warning"
+                    href="#">NightLife</a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div
+                        class="w-100 d-flex justify-content-between align-items-center">
+
+                        <!-- MENÚ CENTRADO -->
+                        <ul class="navbar-nav mx-auto px-5">
+                            <li class="nav-item"><a class="nav-link"
+                                    href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="about-us.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="events.html">Eventos</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="gallery.html">Galería</a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="faq.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link active"
+                                    href="contact.html">Contáctanos</a></li>
+                        </ul>
+
+                        <!-- LOGIN / SIGNUP A LA DERECHA -->
+                        <div class="d-flex gap-2">
+                            <a href="login.html"
+                                class="btn btn-nightlife">Login</a>
+                            <a href="signup.html" class="btn btn-nightlife">Sign
+                                Up</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <section id="contact">
-            <h1 class="section-title">Contáctanos</h1>
-            <p class="section-text">
-                Si tienes alguna consulta, completa el siguiente formulario y te
-                responderemos a la brevedad.
-            </p>
+        <!-- SECCIÓN CONTACTO -->
+        <section class="py-5">
+            <div class="container">
+                <h2
+                    class="text-warning text-uppercase fw-bold mb-4 text-center">Contáctanos</h2>
+                <p class="text-center opacity-75 mb-5">¿Tenés preguntas,
+                    sugerencias o querés reservar para un evento privado?
+                    ¡Escribinos!</p>
 
-            <form id="contact-form">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required />
+                <div class="row g-5">
+                    <!-- Formulario -->
+                    <div class="col-md-7">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre
+                                    completo</label>
+                                <input type="text"
+                                    class="form-control bg-black text-white border-secondary"
+                                    id="nombre" placeholder="Tu nombre"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo
+                                    electrónico</label>
+                                <input type="email"
+                                    class="form-control bg-black text-white border-secondary"
+                                    id="email" placeholder="ejemplo@correo.com"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje"
+                                    class="form-label">Mensaje</label>
+                                <textarea
+                                    class="form-control bg-black text-white border-secondary"
+                                    id="mensaje" rows="5"
+                                    placeholder="Escribí tu mensaje..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-warning fw-bold">Enviar
+                                Mensaje</button>
+                        </form>
+                    </div>
 
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required />
-
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4"
-                    required></textarea>
-
-                <button type="submit" class="contact-btn">Enviar</button>
-            </form>
+                    <!-- Información de contacto -->
+                    <div class="col-md-5">
+                        <h5
+                            class="text-uppercase text-primary mb-3">Información</h5>
+                        <p><i
+                                class="fas fa-map-marker-alt me-2 text-warning"></i>
+                            Av. Fiesta 123, Buenos Aires, Argentina</p>
+                        <p><i class="fas fa-phone me-2 text-warning"></i> +54 9
+                            11 1234 5678</p>
+                        <p><i class="fas fa-envelope me-2 text-warning"></i>
+                            contacto@nightlife.com</p>
+                        <h6 class="mt-4 text-secondary text-uppercase">Horario
+                            de atención</h6>
+                        <p>Miércoles a Domingo - 20:00 hs a 5:00 hs</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <footer id="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <h2>NightLife</h2>
-                    <p>La mejor experiencia nocturna de tu ciudad.</p>
+        <!-- FOOTER -->
+        <footer class="bg-black text-white py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <h5 class="text-primary">NightLife</h5>
+                        <p>La mejor experiencia nocturna de tu ciudad.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-warning text-uppercase">Enlaces
+                            rápidos</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="../index.html"
+                                    class="text-white text-decoration-none">Inicio</a></li>
+                            <li><a href="events.html"
+                                    class="text-white text-decoration-none">Eventos</a></li>
+                            <li><a href="gallery.html"
+                                    class="text-white text-decoration-none">Galería</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-warning text-uppercase">Redes</h6>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-white fs-5"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white fs-5"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white fs-5"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../pages/events.html">Eventos</a></li>
-                        <li><a href="../pages/gallery.html">Galería</a></li>
-                        <li><a href="../pages/contact.html">Contáctanos</a></li>
-                    </ul>
+                <div class="text-center pt-4 border-top mt-4">
+                    <p class="mb-0">&copy; 2025 Fiesta Nocturna - Todos los
+                        derechos reservados.</p>
                 </div>
-
-                <div class="footer-social">
-                    <h4>Seguinos</h4>
-                    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
-                    <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
-                    <a href="#"><i class="fab fa-tiktok"></i>TikTok</a>
-                </div>  
-            </div>
-            <div class="footer-copy">
-                <p>&copy; 2025 Fiesta Nocturna - Todos los derechos
-                    reservados.</p>
             </div>
         </footer>
+
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
