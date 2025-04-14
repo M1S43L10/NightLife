@@ -8,20 +8,20 @@
         <!-- Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet">
+            rel="stylesheet" />
 
-        <!-- Font Awesome (íconos sociales) -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-        <!-- Tu CSS personalizado -->
         <link rel="stylesheet" href="styles.css" />
     </head>
 
     <body class="bg-dark text-white">
-
         <!-- INTRO DE ENTRADA -->
-        <div id="intro-cover"
+        <div
+            id="intro-cover"
             class="position-fixed top-0 start-0 w-100 h-100 bg-black d-flex flex-column justify-content-center align-items-center text-center z-3">
             <h1 class="display-3 fw-bold text-warning">NightLife</h1>
             <p class="text-light fs-5">La mejor fiesta comienza ahora...</p>
@@ -33,51 +33,77 @@
                 <a class="navbar-brand fw-bold text-warning"
                     href="#">NightLife</a>
 
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Menú centrado -->
+                    <ul class="navbar-nav mx-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="pages/about-us.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="pages/events.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="pages/gallery.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="pages/contact.html">Contáctanos</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botones Login/Signup DESKTOP -->
+                    <div class="d-none d-lg-flex gap-2 ms-lg-3">
+                        <a href="pages/signup.html" class="btn btn-signup">Sign
+                            Up</a>
+                        <a href="pages/login.html"
+                            class="btn btn-login">Login</a>
+                    </div>
+
+                    <!-- Botones Login/Signup MOBILE -->
                     <div
-                        class="w-100 d-flex justify-content-between align-items-center">
-
-                        <!-- MENÚ CENTRADO -->
-                        <ul class="navbar-nav mx-auto px-5">
-                            <li class="nav-item"><a class="nav-link active"
-                                    href="#">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="pages/about-us.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="pages/events.html">Eventos</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="pages/gallery.html">Galería</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="pages/faq.html">FAQ</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="pages/contact.html">Contáctanos</a></li>
-                        </ul>
-
-                        <!-- LOGIN / SIGNUP A LA DERECHA -->
-                        <div class="d-flex gap-2">
-                            <a href="login.html"
-                                class="btn btn-nightlife">Login</a>
-                            <a href="signup.html" class="btn btn-nightlife">Sign
-                                Up</a>
-                        </div>
+                        class="d-lg-none d-flex justify-content-center gap-3 py-3 w-100">
+                        <a href="pages/signup.html" class="btn btn-signup">Sign
+                            Up</a>
+                        <a href="pages/login.html"
+                            class="btn btn-login">Login</a>
                     </div>
                 </div>
             </div>
         </nav>
 
         <!-- HERO -->
-        <header class="text-center py-5"
-            style="background: url('assets/fondo-discoteca.webp') no-repeat center center / cover; min-height: 100vh; position: relative;">
-            <div class="position-absolute top-0 start-0 w-100 h-100"
-                style="background: rgba(0, 0, 0, 0.6); z-index: 0;"></div>
+        <header
+            class="text-center py-5"
+            style="
+        background: url('assets/fondo-discoteca.webp') no-repeat center center /
+          cover;
+        min-height: 100vh;
+        position: relative;
+      ">
+            <div
+                class="position-absolute top-0 start-0 w-100 h-100"
+                style="background: rgba(0, 0, 0, 0.6); z-index: 0"></div>
             <div class="container position-relative z-1 text-white py-5">
-                <h1 class="display-4 fw-bold text-primary hero-title">¡Vive la
-                    mejor fiesta nocturna!</h1>
+                <h1 class="display-4 fw-bold hero-title">
+                    ¡Vive la mejor fiesta nocturna!
+                </h1>
                 <p class="lead mt-3">Luces, música y la mejor energía te
                     esperan.</p>
                 <a href="pages/about-us.html"
@@ -90,9 +116,11 @@
             <div class="container">
                 <h2
                     class="text-warning text-uppercase fw-bold mb-3">Bienvenidos</h2>
-                <p class="opacity-75 fs-5">Nuestra discoteca ofrece una
-                    experiencia única con los mejores DJs y un ambiente
-                    inigualable.</p>
+                <p class="opacity-75 fs-5">
+                    Nuestra discoteca ofrece una experiencia única con los
+                    mejores DJs y
+                    un ambiente inigualable.
+                </p>
             </div>
         </section>
 
@@ -101,21 +129,32 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <h5 class="text-primary">NightLife</h5>
+                        <h5 class="fw-bold text-warning">NightLife</h5>
                         <p>La mejor experiencia nocturna de tu ciudad.</p>
                     </div>
                     <div class="col-md-4">
                         <h6 class="text-warning text-uppercase">Enlaces
                             rápidos</h6>
                         <ul class="list-unstyled">
-                            <li><a href="index.html"
-                                    class="text-white text-decoration-none">Inicio</a></li>
-                            <li><a href="pages/events.html"
-                                    class="text-white text-decoration-none">Eventos</a></li>
-                            <li><a href="pages/gallery.html"
-                                    class="text-white text-decoration-none">Galería</a></li>
-                            <li><a href="pages/contact.html"
-                                    class="text-white text-decoration-none">Contacto</a></li>
+                            <li>
+                                <a href="index.html"
+                                    class="text-white text-decoration-none">Inicio</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="pages/events.html"
+                                    class="text-white text-decoration-none">Eventos</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="pages/gallery.html"
+                                    class="text-white text-decoration-none">Galería</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="pages/contact.html"
+                                    class="text-white text-decoration-none">Contacto</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-4">
@@ -131,8 +170,10 @@
                     </div>
                 </div>
                 <div class="text-center pt-4 border-top mt-4">
-                    <p class="mb-0">&copy; 2025 Fiesta Nocturna - Todos los
-                        derechos reservados.</p>
+                    <p class="mb-0">
+                        &copy; 2025 Fiesta Nocturna - Todos los derechos
+                        reservados.
+                    </p>
                 </div>
             </div>
         </footer>
@@ -141,16 +182,15 @@
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script>
-                let cover = document.getElementById("intro-cover");
-                let shown = false;
-              
-                window.addEventListener("scroll", () => {
-                  if (!shown && window.scrollY > 20) {
-                    cover.classList.add("hidden");
-                    shown = true;
-                  }
-                });
-              </script>
+      let cover = document.getElementById("intro-cover");
+      let shown = false;
 
+      window.addEventListener("scroll", () => {
+        if (!shown && window.scrollY > 20) {
+          cover.classList.add("hidden");
+          shown = true;
+        }
+      });
+    </script>
     </body>
 </html>

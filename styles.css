@@ -28,7 +28,7 @@ body {
 }
 
 
-/* NAVBAR ajustado para Bootstrap */
+/* NAVBAR */
 .navbar {
     background-color: #000;
     padding: 15px 30px;
@@ -54,25 +54,78 @@ body {
 }
 
 
-/* ESTILO UNIFICADO PARA BOTONES */
-.btn-nightlife {
-    background-color: var(--color-secundario);
+/* BOTÓN LOGIN - sólido y moderno */
+.btn-login {
+    background-color: #ff00ff;
+    /* fucsia eléctrico */
     color: black;
-    font-weight: bold;
-    border-radius: 25px;
+    font-weight: 600;
     padding: 10px 20px;
+    border-radius: 6px;
     border: none;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
 }
 
-.btn-nightlife:hover {
-    background-color: var(--color-terciario);
-    color: black;
-    text-shadow: 0 0 5px var(--color-secundario);
-    box-shadow: 0 0 10px var(--color-terciario);
+.btn-login:hover {
+    background-color: #e100e1;
+    color: white;
+    box-shadow: 0 0 10px #ff00ff80;
 }
+
+/* BOTÓN SIGNUP - transparente con borde */
+.btn-signup {
+    background-color: transparent;
+    color: #ff00ff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #ff00ff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-signup:hover {
+    background-color: #ff00ff20;
+    color: white;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff80;
+}
+
+/* Efecto fiesta para el título NightLife del inicio */
+section.text-center a.text-warning.fw-bold {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hover con efecto festivo */
+section.text-center a.text-warning.fw-bold:hover {
+    color: var(--color-primario);
+    text-shadow:
+        0 0 10px var(--color-primario),
+        0 0 20px var(--color-secundario),
+        0 0 30px var(--color-terciario);
+    animation: titulo-glow 1.4s infinite alternate;
+}
+
+/* Animación glow tipo fiesta */
+@keyframes titulo-glow {
+    0% {
+        text-shadow: 0 0 5px var(--color-secundario);
+    }
+    50% {
+        text-shadow: 0 0 15px var(--color-primario), 0 0 25px var(--color-terciario);
+    }
+    100% {
+        text-shadow: 0 0 10px var(--color-terciario), 0 0 30px var(--color-secundario);
+    }
+}
+
 
 
 /* ICONOS SOCIALES */
@@ -102,43 +155,6 @@ body {
 
 .footer-social a:hover i {
     color: var(--color-primario);
-}
-
-/* HERO TITLE efecto glow */
-.hero-title {
-    font-size: 2.5rem;
-    color: var(--color-primario);
-    animation: none;
-}
-
-.hero-title:hover {
-    animation: fiesta-glow 1s infinite ease-in-out;
-    cursor: pointer;
-}
-
-@keyframes fiesta-glow {
-
-    0%,
-    100% {
-        text-shadow: 0 0 10px var(--color-primario),
-            0 0 20px var(--color-secundario),
-            0 0 30px var(--color-terciario);
-        color: var(--color-primario);
-    }
-
-    33% {
-        text-shadow: 0 0 5px var(--color-secundario),
-            0 0 15px var(--color-primario),
-            0 0 25px var(--color-terciario);
-        color: var(--color-secundario);
-    }
-
-    66% {
-        text-shadow: 0 0 15px var(--color-terciario),
-            0 0 25px var(--color-secundario),
-            0 0 35px var(--color-primario);
-        color: var(--color-terciario);
-    }
 }
 
 /* FLIP CARDS GALERÍA */
@@ -432,6 +448,7 @@ body {
         text-decoration: none;
         font-weight: bold;
         border-radius: 5px;
+        f
     }
 
     .hero-btn:hover {

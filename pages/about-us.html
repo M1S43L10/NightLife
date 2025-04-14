@@ -16,46 +16,62 @@
         <link rel="stylesheet" href="../styles.css" />
     </head>
     <body class="bg-dark text-white">
-
-        <!-- Navbar (puede ser el mismo de index.html) -->
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container">
                 <a class="navbar-brand fw-bold text-warning"
-                    href="#">NightLife</a>
+                    href="../index.html">NightLife</a>
 
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Menú centrado -->
+                    <ul class="navbar-nav mx-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link"
+                                href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="events.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="gallery.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="contact.html">Contáctanos</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botones Login/Signup DESKTOP -->
+                    <div class="d-none d-lg-flex gap-2 ms-lg-3">
+                        <a href="signup.html" class="btn btn-signup">Sign
+                            Up</a>
+                        <a href="login.html"
+                            class="btn btn-login">Login</a>
+                    </div>
+
+                    <!-- Botones Login/Signup MOBILE -->
                     <div
-                        class="w-100 d-flex justify-content-between align-items-center">
-
-                        <!-- MENÚ CENTRADO -->
-                        <ul class="navbar-nav mx-auto px-5">
-                            <li class="nav-item"><a class="nav-link"
-                                    href="../index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link active"
-                                    href="about-us.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="events.html">Eventos</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="gallery.html">Galería</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="faq.html">FAQ</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="contact.html">Contáctanos</a></li>
-                        </ul>
-
-                        <!-- LOGIN / SIGNUP A LA DERECHA -->
-                        <div class="d-flex gap-2">
-                            <a href="login.html"
-                                class="btn btn-nightlife">Login</a>
-                            <a href="signup.html" class="btn btn-nightlife">Sign
-                                Up</a>
-                        </div>
+                        class="d-lg-none d-flex justify-content-center gap-3 py-3 w-100">
+                        <a href="signup.html" class="btn btn-signup">Sign
+                            Up</a>
+                        <a href="login.html"
+                            class="btn btn-login">Login</a>
                     </div>
                 </div>
             </div>
@@ -80,7 +96,8 @@
                 <div class="row justify-content-center g-4">
 
                     <!-- Miembro 1 -->
-                    <div class="col-sm-6 col-md-4 d-flex justify-content-center">
+                    <div
+                        class="col-sm-6 col-md-4 d-flex justify-content-center">
                         <div class="team-member text-center">
                             <img src="../assets/DJ.png" alt="DJ Alex">
                             <h3>DJ Alex</h3>
@@ -90,7 +107,8 @@
                     </div>
 
                     <!-- Miembro 2 -->
-                    <div class="col-sm-6 col-md-4 d-flex justify-content-center">
+                    <div
+                        class="col-sm-6 col-md-4 d-flex justify-content-center">
                         <div class="team-member text-center">
                             <img src="../assets/VJ.png" alt="VJ Carla">
                             <h3>VJ Carla</h3>
@@ -100,7 +118,8 @@
                     </div>
 
                     <!-- Miembro 3 -->
-                    <div class="col-sm-6 col-md-4 d-flex justify-content-center">
+                    <div
+                        class="col-sm-6 col-md-4 d-flex justify-content-center">
                         <div class="team-member text-center">
                             <img src="../assets/HOST.png" alt="Leo Host">
                             <h3>Leo Host</h3>
@@ -119,7 +138,7 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <h5 class="text-primary">NightLife</h5>
+                        <h5 class="fw-bold text-warning">NightLife</h5>
                         <p>La mejor experiencia nocturna de tu ciudad.</p>
                     </div>
                     <div class="col-md-4">
