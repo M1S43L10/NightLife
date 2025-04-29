@@ -1,0 +1,89 @@
+/* ESTILOS EVENTOS */
+#events {
+    text-align: center;
+    padding: 60px 20px;
+    background: $color-fondo-principal;
+    color: white;
+
+    .section-title {
+        font-size: 2.5rem;
+        color: $color-terciario;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .fancy-hover {
+        border-radius: 12px;
+        padding: 20px;
+        background: #222;
+        transition: all 0.2s ease;
+        max-width: 500px;
+        width: 100%;
+
+        h3 {
+            position: relative;
+            animation: glitch 1.5s infinite;
+        }
+
+        .event-card-body {
+            max-height: 0;
+            opacity: 0;
+            transition: all 1.8s ease;
+            overflow: hidden;
+        }
+    }
+}
+
+
+.fancy-hover:hover {
+    box-shadow: 0 0 20px  $color-primario;
+    border: 1px solid  $color-primario;
+}
+
+/* Opcional: Glitch-style title */
+.fancy-hover h3 {
+    position: relative;
+    animation: glitch 1.5s infinite;
+}
+
+/* EVENTOS */
+.fancy-hover {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fancy-hover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px  $color-primario;
+}
+
+.event-card-header {
+    margin-bottom: 10px;
+}
+
+.event-date {
+    font-size: 0.9rem;
+    color: $color-terciario;
+}
+
+.event-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: $color-secundario;
+    color: black;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: $color-terciario;
+    color: black;
+    text-shadow: 0 0 5px $color-secundario;
+}

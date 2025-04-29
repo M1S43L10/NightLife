@@ -1,0 +1,70 @@
+.sesion-button {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    min-width: 100px;
+    border: 2px solid $color-primario;
+    color: $color-texto;
+    @include transition(all 0.3s ease);
+
+    &.signup {
+        background: $color-primario;
+        color: black;
+
+        &:hover {
+            background: $color-terciario;
+            color: black;
+            box-shadow: 0 0 10px $color-terciario;
+        }
+    }
+
+    &.login {
+        background: transparent;
+        color: $color-primario;
+
+        &:hover {
+            background: $color-primario;
+            color: black;
+            box-shadow: 0 0 10px $color-primario;
+        }
+    }
+}
+
+
+.btn-login,
+.btn-signup {
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    @include transition(all 0.3s ease);
+}
+
+.btn-login {
+    background-color: #ff00ff; // fucsia eléctrico
+    color: black;
+    border: none;
+
+    &:hover {
+        background-color: #e100e1;
+        color: white;
+        box-shadow: 0 0 10px #ff00ff80;
+    }
+}
+
+.btn-signup {
+    background-color: transparent;
+    color: #ff00ff;
+    border: 2px solid #ff00ff;
+
+    &:hover {
+        background-color: #ff00ff20;
+        color: white;
+        border-color: #ff00ff;
+        box-shadow: 0 0 10px #ff00ff80;
+    }
+}

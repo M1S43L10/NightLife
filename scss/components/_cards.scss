@@ -1,0 +1,35 @@
+.team-member img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* podés cambiar a 12px si preferís borde redondeado normal */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px $color-terciario;
+}
+
+
+.team-member {
+    background: $color-fondo-principal;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+
+    h3 {
+        margin-top: 15px;
+        font-size: 1.3rem;
+        color: $color-primario;
+    }
+
+    p {
+        font-size: 1rem;
+        color: $color-texto;
+    }
+}

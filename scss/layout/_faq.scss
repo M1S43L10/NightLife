@@ -1,0 +1,26 @@
+/* SECCIÓN FAQ */
+#faq {
+    text-align: center;
+    padding: 40px;
+    background-color: #111;
+}
+
+.faq-item {
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    background: #222;
+    border-radius: 5px;
+    color: $color-texto;
+}
+
+.faq-question {
+    font-size: 1.5rem;
+    color:  $color-primario;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: $color-secundario;
+}
