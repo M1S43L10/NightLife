@@ -1,0 +1,27 @@
+// -------------------------------------------
+// Variables globales NightLife
+// -------------------------------------------
+
+// Paleta de Colores
+$color-primario: #FFD700;
+$color-secundario: #cccccc; // (Revisar, puede cambiar según tu intención)
+$color-terciario: #ff00ff;  // (Ejemplo, ajustar al real si es otro)
+$color-fondo-principal: #111;
+$color-fondo-secundario: #0a0a0a;
+$color-texto: #f5f5f5;
+
+// Tipografías
+$fuente-principal: 'Poppins', sans-serif;
+
+// Tamaños de fuentes
+$titulo-principal: 2.5rem;
+$titulo-secundario: 1.5rem;
+$texto-normal: 1rem;
+$texto-chico: 0.95rem;
+
+// Border Radius
+$radio-bordes: 5px;
+$radio-bordes-grandes: 12px;
+
+// Sombra
+$sombra-default: 0 4px 15px rgba(255, 255, 255, 0.15);

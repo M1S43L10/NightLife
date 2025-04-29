@@ -1,0 +1,667 @@
+@charset "UTF-8";
+/* GLOBALES */
+body {
+  background-color: #111;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+#intro-cover {
+  transition: opacity 1s ease;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 9999;
+}
+
+#intro-cover.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #000;
+  padding: 15px 30px;
+}
+
+.navbar .nav-link {
+  color: #f5f5f5;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:focus {
+  color: #FFD700;
+  font-weight: bold;
+  text-shadow: 0 0 6px #FFD700;
+}
+
+/* BOTÓN LOGIN - sólido y moderno */
+.btn-login {
+  background-color: #ff00ff;
+  /* fucsia eléctrico */
+  color: black;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-login:hover {
+  background-color: #e100e1;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5019607843);
+}
+
+/* BOTÓN SIGNUP - transparente con borde */
+.btn-signup {
+  background-color: transparent;
+  color: #ff00ff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid #ff00ff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-signup:hover {
+  background-color: rgba(255, 0, 255, 0.1254901961);
+  color: white;
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5019607843);
+}
+
+/* Efecto fiesta para el título NightLife del inicio */
+section.text-center a.text-warning.fw-bold {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Hover con efecto festivo */
+section.text-center a.text-warning.fw-bold:hover {
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #cccccc, 0 0 30px #ff00ff;
+  animation: titulo-glow 1.4s infinite alternate;
+}
+
+/* Animación glow tipo fiesta */
+@keyframes titulo-glow {
+  0% {
+    text-shadow: 0 0 5px #cccccc;
+  }
+  50% {
+    text-shadow: 0 0 15px #FFD700, 0 0 25px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff00ff, 0 0 30px #cccccc;
+  }
+}
+/* ICONOS SOCIALES */
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background-color: #111;
+  color: #f5f5f5;
+  transition: all 0.3s ease;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.footer-social a i {
+  font-size: 18px;
+  color: #cccccc;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: #1a1a1a;
+  color: #FFD700;
+}
+
+.footer-social a:hover i {
+  color: #FFD700;
+}
+
+/* FLIP CARDS GALERÍA */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin: auto;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-back {
+  background-color: #222;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* EVENTOS */
+.fancy-hover {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fancy-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #FFD700;
+}
+
+.event-card-header {
+  margin-bottom: 10px;
+}
+
+.event-date {
+  font-size: 0.9rem;
+  color: #ff00ff;
+}
+
+.event-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #cccccc;
+  color: black;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.event-button:hover {
+  background-color: #ff00ff;
+  color: black;
+  text-shadow: 0 0 5px #cccccc;
+}
+
+/* RESPONSIVE SOCIAL */
+@media (max-width: 768px) {
+  .footer-social {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+/* ===== ESTILOS ADICIONALES IMPORTADOS DE styles__.css ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 10px;
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 10px;
+  border: 2px solid #111;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+  box-shadow: 0px 0px 10px #cccccc;
+}
+
+/* === NAVBAR PERSONALIZADO (solo colores y efectos, compatible con Bootstrap) === */
+.navbar {
+  background-color: #000;
+  /* fondo oscuro */
+  padding: 15px 30px;
+}
+
+/* Color base de los enlaces */
+.navbar .nav-link {
+  color: #f5f5f5;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Hover con efecto y color terciario */
+.navbar .nav-link:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+/* Enlace activo con color primario y bold */
+.navbar .nav-link.active,
+.navbar .nav-link:focus {
+  color: #FFD700;
+  font-weight: bold;
+  text-shadow: 0 0 6px #FFD700;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.sesion-button {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 100px;
+  border: 2px solid #FFD700;
+  color: #f5f5f5;
+}
+
+/* SIGN UP*/
+.signup {
+  background: #FFD700;
+  color: black;
+}
+
+/* LOGIN */
+.login {
+  background: transparent;
+  color: #FFD700;
+}
+
+.signup:hover {
+  background: #ff00ff;
+  color: black;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+.login:hover {
+  background: #FFD700;
+  color: black;
+  box-shadow: 0 0 10px #FFD700;
+}
+
+/* HERO SECTION */
+#hero {
+  background: url("assets/fondo-discoteca.webp") no-repeat center center/cover;
+  height: 100vh;
+  display: block;
+  padding-top: 200px;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenido del Hero */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 10px 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Estilo base del título principal */
+.hero-title {
+  font-size: 2.5rem;
+  color: #FFD700;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+/* Efecto tipo fiesta al pasar el mouse */
+.hero-title:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #cccccc, 0 0 30px #ff00ff;
+  animation: party-glow 1.5s infinite alternate;
+}
+
+.team-member img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* podés cambiar a 12px si preferís borde redondeado normal */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+/* Animación tipo glow pulsante */
+@keyframes party-glow {
+  0% {
+    text-shadow: 0 0 5px #cccccc;
+  }
+  50% {
+    text-shadow: 0 0 15px #FFD700, 0 0 25px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #cccccc, 0 0 30px #FFD700;
+  }
+} /* ← CERRÁS acá el keyframes */
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #cccccc;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.hero-btn:hover {
+  background-color: #ff00ff;
+  text-shadow: 0 0 5px #cccccc;
+}
+
+/* FOOTER */
+#footer {
+  background: #111;
+  padding: 40px 20px 20px;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+#footer .footer-logo h2 {
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+#footer .footer-links h4,
+#footer .footer-social h4 {
+  color: #ff00ff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#footer .footer-links ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+#footer .footer-links ul li a:hover {
+  color: #FFD700;
+}
+
+#about .about-title {
+  font-size: 2.5rem;
+  color: #cccccc;
+}
+#about .about-text {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+.team-member {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+}
+.team-member h3 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #FFD700;
+}
+.team-member p {
+  font-size: 1rem;
+  color: #f5f5f5;
+}
+
+/* ESTILOS EVENTOS */
+#events {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+  color: white;
+}
+#events .section-title {
+  font-size: 2.5rem;
+  color: #ff00ff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#events .fancy-hover {
+  border-radius: 12px;
+  padding: 20px;
+  background: #222;
+  transition: all 0.2s ease;
+  max-width: 500px;
+  width: 100%;
+}
+#events .fancy-hover h3 {
+  position: relative;
+  animation: glitch 1.5s infinite;
+}
+#events .fancy-hover .event-card-body {
+  max-height: 0;
+  opacity: 0;
+  transition: all 1.8s ease;
+  overflow: hidden;
+}
+
+.fancy-hover:hover {
+  box-shadow: 0 0 20px #FFD700;
+  border: 1px solid #FFD700;
+}
+
+/* Opcional: Glitch-style title */
+.fancy-hover h3 {
+  position: relative;
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 #FFD700;
+  }
+  20% {
+    text-shadow: -2px 0 #cccccc;
+  }
+  40% {
+    text-shadow: 2px 2px #ff00ff;
+  }
+  60% {
+    text-shadow: -2px -2px #FFD700;
+  }
+  80% {
+    text-shadow: 2px 0 #cccccc;
+  }
+  100% {
+    text-shadow: 0 0 #ff00ff;
+  }
+}
+.event-card-header h3 {
+  margin: 10px 0 0;
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+/* Estilo para el texto */
+.event-card-body p {
+  font-size: 1rem;
+  color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+/* SECCIÓN GALERÍA */
+#gallery {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #0a0a0a, #111);
+  color: white;
+}
+#gallery .section-title {
+  font-size: 2.5rem;
+  color: #ff00ff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#gallery .gallery-images figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#gallery .gallery-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin: auto;
+}
+
+/* SECCIÓN FAQ */
+#faq {
+  text-align: center;
+  padding: 40px;
+  background-color: #111;
+}
+
+.faq-item {
+  margin: 20px auto;
+  padding: 15px;
+  width: 80%;
+  background: #222;
+  border-radius: 5px;
+  color: #f5f5f5;
+}
+
+.faq-question {
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #cccccc;
+}
+
+/* SECCIÓN CONTACTO */
+#contact {
+  text-align: center;
+  padding: 40px;
+  background-color: #111;
+}
+
+#contact-form {
+  margin: 20px auto;
+  width: 60%;
+  padding: 20px;
+  background: #222;
+  border-radius: 5px;
+  color: #f5f5f5;
+}
+
+#contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+#contact-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #ff00ff;
+}
+
+/*# sourceMappingURL=style.css.map */

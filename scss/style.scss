@@ -1,16 +1,24 @@
-:root {
-    --color-fondo: #0a0a0a;
-    --color-primario: #ff00ff;
-    --color-secundario: #00ffff;
-    --color-terciario: #ffcc00;
-    --color-texto: #ffffff;
-    --color-sombra: rgba(255, 0, 255, 0.6);
-}
+// Utilidades
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+
+// Layout
+@import 'layout/grid';
+@import 'layout/flexbox';
+
+// Componentes
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/buttons';
 
 /* GLOBALES */
 body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+    background-color: $color-fondo-principal;
+    color: $color-texto;
     font-family: Arial, sans-serif;
 }
 
@@ -35,22 +43,22 @@ body {
 }
 
 .navbar .nav-link {
-    color: var(--color-texto);
+    color: $color-texto;
     font-size: 18px;
     text-decoration: none;
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .navbar .nav-link:hover {
-    color: var(--color-terciario);
-    text-shadow: 0 0 5px var(--color-terciario);
+    color: $color-terciario;
+    text-shadow: 0 0 5px $color-terciario;
 }
 
 .navbar .nav-link.active,
 .navbar .nav-link:focus {
-    color: var(--color-primario);
+    color:  $color-primario;
     font-weight: bold;
-    text-shadow: 0 0 6px var(--color-primario);
+    text-shadow: 0 0 6px  $color-primario;
 }
 
 
@@ -105,24 +113,24 @@ section.text-center a.text-warning.fw-bold {
 
 /* Hover con efecto festivo */
 section.text-center a.text-warning.fw-bold:hover {
-    color: var(--color-primario);
+    color:  $color-primario;
     text-shadow:
-        0 0 10px var(--color-primario),
-        0 0 20px var(--color-secundario),
-        0 0 30px var(--color-terciario);
+        0 0 10px  $color-primario,
+        0 0 20px $color-secundario,
+        0 0 30px $color-terciario;
     animation: titulo-glow 1.4s infinite alternate;
 }
 
 /* Animación glow tipo fiesta */
 @keyframes titulo-glow {
     0% {
-        text-shadow: 0 0 5px var(--color-secundario);
+        text-shadow: 0 0 5px $color-secundario;
     }
     50% {
-        text-shadow: 0 0 15px var(--color-primario), 0 0 25px var(--color-terciario);
+        text-shadow: 0 0 15px  $color-primario, 0 0 25px $color-terciario;
     }
     100% {
-        text-shadow: 0 0 10px var(--color-terciario), 0 0 30px var(--color-secundario);
+        text-shadow: 0 0 10px $color-terciario, 0 0 30px $color-secundario;
     }
 }
 
@@ -136,7 +144,7 @@ section.text-center a.text-warning.fw-bold:hover {
     padding: 8px 14px;
     border-radius: 30px;
     background-color: #111;
-    color: var(--color-texto);
+    color: $color-texto;
     transition: all 0.3s ease;
     width: fit-content;
     text-decoration: none;
@@ -144,17 +152,17 @@ section.text-center a.text-warning.fw-bold:hover {
 
 .footer-social a i {
     font-size: 18px;
-    color: var(--color-secundario);
+    color: $color-secundario;
     transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
     background-color: #1a1a1a;
-    color: var(--color-primario);
+    color:  $color-primario;
 }
 
 .footer-social a:hover i {
-    color: var(--color-primario);
+    color:  $color-primario;
 }
 
 /* FLIP CARDS GALERÍA */
@@ -219,7 +227,7 @@ section.text-center a.text-warning.fw-bold:hover {
 
 .fancy-hover:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 20px var(--color-primario);
+    box-shadow: 0 0 20px  $color-primario;
 }
 
 .event-card-header {
@@ -228,14 +236,14 @@ section.text-center a.text-warning.fw-bold:hover {
 
 .event-date {
     font-size: 0.9rem;
-    color: var(--color-terciario);
+    color: $color-terciario;
 }
 
 .event-button {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 16px;
-    background-color: var(--color-secundario);
+    background-color: $color-secundario;
     color: black;
     font-weight: bold;
     border-radius: 25px;
@@ -244,9 +252,9 @@ section.text-center a.text-warning.fw-bold:hover {
 }
 
 .event-button:hover {
-    background-color: var(--color-terciario);
+    background-color: $color-terciario;
     color: black;
-    text-shadow: 0 0 5px var(--color-secundario);
+    text-shadow: 0 0 5px $color-secundario;
 }
 
 /* RESPONSIVE SOCIAL */
@@ -260,37 +268,27 @@ section.text-center a.text-warning.fw-bold:hover {
 
 /* ===== ESTILOS ADICIONALES IMPORTADOS DE styles__.css ===== */
 
-/* VARIABLES */
-:root {
-    --color-fondo: #0a0a0a;
-    --color-primario: #ff00ff;
-    --color-secundario: #00ffff;
-    --color-terciario: #ffcc00;
-    --color-texto: #ffffff;
-    --color-sombra: rgba(255, 0, 255, 0.6);
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 /* Fondo del scrollbar */
 ::-webkit-scrollbar-track {
-    background: var(--color-fondo);
+    background: $color-fondo-principal;
     border-radius: 10px;
 }
 
 /* Barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-    background: var(--color-primario);
+    background:  $color-primario;
     border-radius: 10px;
-    border: 2px solid var(--color-fondo);
+    border: 2px solid $color-fondo-principal;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-secundario);
-    box-shadow: 0px 0px 10px var(--color-secundario);
+    background: $color-secundario;
+    box-shadow: 0px 0px 10px $color-secundario;
 }
 
 /* === NAVBAR PERSONALIZADO (solo colores y efectos, compatible con Bootstrap) === */
@@ -302,7 +300,7 @@ section.text-center a.text-warning.fw-bold:hover {
 
 /* Color base de los enlaces */
 .navbar .nav-link {
-    color: var(--color-texto);
+    color: $color-texto;
     font-size: 18px;
     text-decoration: none;
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
@@ -310,16 +308,16 @@ section.text-center a.text-warning.fw-bold:hover {
 
 /* Hover con efecto y color terciario */
 .navbar .nav-link:hover {
-    color: var(--color-terciario);
-    text-shadow: 0 0 5px var(--color-terciario);
+    color: $color-terciario;
+    text-shadow: 0 0 5px $color-terciario;
 }
 
 /* Enlace activo con color primario y bold */
 .navbar .nav-link.active,
 .navbar .nav-link:focus {
-    color: var(--color-primario);
+    color:  $color-primario;
     font-weight: bold;
-    text-shadow: 0 0 6px var(--color-primario);
+    text-shadow: 0 0 6px  $color-primario;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -333,32 +331,32 @@ section.text-center a.text-warning.fw-bold:hover {
     transition: all 0.3s ease;
     text-align: center;
     min-width: 100px;
-    border: 2px solid var(--color-primario);
-    color: var(--color-texto);
+    border: 2px solid  $color-primario;
+    color: $color-texto;
 }
 
 /* SIGN UP*/
 .signup {
-    background: var(--color-primario);
+    background:  $color-primario;
     color: black;
 }
 
 /* LOGIN */
 .login {
     background: transparent;
-    color: var(--color-primario);
+    color:  $color-primario;
 }
 
 .signup:hover {
-    background: var(--color-terciario);
+    background: $color-terciario;
     color: black;
-    box-shadow: 0 0 10px var(--color-terciario);
+    box-shadow: 0 0 10px $color-terciario;
 }
 
 .login:hover {
-    background: var(--color-primario);
+    background:  $color-primario;
     color: black;
-    box-shadow: 0 0 10px var(--color-primario);
+    box-shadow: 0 0 10px  $color-primario;
 }
 
 /* HERO SECTION */
@@ -386,25 +384,25 @@ section.text-center a.text-warning.fw-bold:hover {
 .hero-content {
     position: relative;
     z-index: 1;
-    color: var(--color-texto);
-    text-shadow: 2px 2px 10px var(--color-sombra);
+    color: $color-texto;
+    text-shadow: 2px 2px 10px $sombra-default;
 }
 
 /* Estilo base del título principal */
 .hero-title {
     font-size: 2.5rem;
-    color: var(--color-primario);
+    color:  $color-primario;
     transition: all 0.5s ease;
     text-align: center;
 }
 
 /* Efecto tipo fiesta al pasar el mouse */
 .hero-title:hover {
-    color: var(--color-terciario);
+    color: $color-terciario;
     text-shadow:
-        0 0 10px var(--color-primario),
-        0 0 20px var(--color-secundario),
-        0 0 30px var(--color-terciario);
+        0 0 10px  $color-primario,
+        0 0 20px $color-secundario,
+        0 0 30px $color-terciario;
     animation: party-glow 1.5s infinite alternate;
 }
 
@@ -421,132 +419,161 @@ section.text-center a.text-warning.fw-bold:hover {
 
 .team-member img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px var(--color-terciario);
+    box-shadow: 0 0 15px $color-terciario;
 }
 
 
 /* Animación tipo glow pulsante */
 @keyframes party-glow {
     0% {
-        text-shadow: 0 0 5px var(--color-secundario);
+        text-shadow: 0 0 5px $color-secundario;
     }
 
     50% {
-        text-shadow: 0 0 15px var(--color-primario), 0 0 25px var(--color-terciario);
+        text-shadow: 0 0 15px  $color-primario, 0 0 25px $color-terciario;
     }
 
     100% {
-        text-shadow: 0 0 10px var(--color-secundario), 0 0 30px var(--color-primario);
+        text-shadow: 0 0 10px $color-secundario, 0 0 30px  $color-primario;
     }
+}  /* ← CERRÁS acá el keyframes */
 
     .hero-btn {
         display: inline-block;
         margin-top: 20px;
         padding: 10px 20px;
-        background-color: var(--color-secundario);
+        background-color: $color-secundario;
         color: #000;
         text-decoration: none;
         font-weight: bold;
         border-radius: 5px;
-        f
+
+        &:hover {
+            background-color: $color-terciario;
+            text-shadow: 0 0 5px $color-secundario;
+        }
     }
 
-    .hero-btn:hover {
-        background-color: var(--color-terciario);
-        text-shadow: 0 0 5px var(--color-secundario);
-    }
 
     /* FOOTER */
     #footer {
-        background: #000;
+        background: $color-fondo-principal;
         padding: 40px 20px 20px;
-        color: var(--color-texto);
+        color: $color-texto;
         font-size: 0.95rem;
+    
+        .footer-logo {
+            h2 {
+                color: $color-primario;
+                margin-bottom: 10px;
+            }
+        }
+    
+        .footer-links,
+        .footer-social {
+            h4 {
+                color: $color-terciario;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    
+        .footer-links {
+            ul {
+                li {
+                    a {
+                        color: $color-texto;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+    
+                        &:hover {
+                            color: $color-primario;
+                        }
+                    }
+                }
+            }
+        }
     }
+    
 
-    .footer-logo h2 {
-        color: var(--color-primario);
-        margin-bottom: 10px;
+    #about {
+        .about-title {
+            font-size: 2.5rem;
+            color: $color-secundario;
+        }
+    
+        .about-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: $color-texto;
+        }
     }
-
-    .footer-links h4,
-    .footer-social h4 {
-        color: var(--color-terciario);
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .footer-links ul li a {
-        color: var(--color-texto);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .footer-links ul li a:hover {
-        color: var(--color-primario);
-    }
-
-    .about-title {
-        font-size: 2.5rem;
-        color: var(--color-secundario);
-    }
-
-    .about-text {
-        font-size: 1.2rem;
-        max-width: 800px;
-        margin: 20px auto;
-        line-height: 1.6;
-        color: var(--color-texto);
-    }
+    
 
     .team-member {
-        background: #111;
+        background: $color-fondo-principal;
         padding: 20px;
         border-radius: 10px;
         text-align: center;
         width: 250px;
+    
+        h3 {
+            margin-top: 15px;
+            font-size: 1.3rem;
+            color: $color-primario;
+        }
+    
+        p {
+            font-size: 1rem;
+            color: $color-texto;
+        }
     }
-
-    .team-member h3 {
-        margin-top: 15px;
-        font-size: 1.3rem;
-        color: var(--color-primario);
-    }
-
-    .team-member p {
-        font-size: 1rem;
-        color: var(--color-texto);
-    }
+    
 
     /* ESTILOS EVENTOS */
     #events {
         text-align: center;
         padding: 60px 20px;
-        background: #111;
+        background: $color-fondo-principal;
         color: white;
+    
+        .section-title {
+            font-size: 2.5rem;
+            color: $color-terciario;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    
+        .fancy-hover {
+            border-radius: 12px;
+            padding: 20px;
+            background: #222;
+            transition: all 0.2s ease;
+            max-width: 500px;
+            width: 100%;
+    
+            h3 {
+                position: relative;
+                animation: glitch 1.5s infinite;
+            }
+    
+            .event-card-body {
+                max-height: 0;
+                opacity: 0;
+                transition: all 1.8s ease;
+                overflow: hidden;
+            }
+        }
     }
-
-    /* NUEVO DISEÑO FANCY HOVER */
-    .fancy-hover {
-        border-radius: 12px;
-        padding: 20px;
-        background: #222;
-        transition: all 0.2s ease;
-        max-width: 500px;
-        width: 100%;
-    }
-
-    .fancy-hover .event-card-body {
-        max-height: 0;
-        opacity: 0;
-        transition: all 1.8s ease;
-        overflow: hidden;
-    }
+    
 
     .fancy-hover:hover {
-        box-shadow: 0 0 20px var(--color-primario);
-        border: 1px solid var(--color-primario);
+        box-shadow: 0 0 20px  $color-primario;
+        border: 1px solid  $color-primario;
     }
 
     /* Opcional: Glitch-style title */
@@ -557,28 +584,24 @@ section.text-center a.text-warning.fw-bold:hover {
 
     @keyframes glitch {
         0% {
-            text-shadow: 2px 0 var(--color-primario);
+            text-shadow: 2px 0  $color-primario;
         }
-
         20% {
-            text-shadow: -2px 0 var(--color-secundario);
+            text-shadow: -2px 0 $color-secundario;
         }
-
         40% {
-            text-shadow: 2px 2px var(--color-terciario);
+            text-shadow: 2px 2px $color-terciario;
         }
-
         60% {
-            text-shadow: -2px -2px var(--color-primario);
+            text-shadow: -2px -2px  $color-primario;
         }
-
         80% {
-            text-shadow: 2px 0 var(--color-secundario);
+            text-shadow: 2px 0 $color-secundario;
         }
-
         100% {
-            text-shadow: 0 0 var(--color-terciario);
+            text-shadow: 0 0 $color-terciario;
         }
+    }    
 
         .event-card-header h3 {
             margin: 10px 0 0;
@@ -589,7 +612,7 @@ section.text-center a.text-warning.fw-bold:hover {
         /* Estilo para el texto */
         .event-card-body p {
             font-size: 1rem;
-            color: var(--color-texto);
+            color: $color-texto;
             margin-bottom: 10px;
         }
 
@@ -597,36 +620,36 @@ section.text-center a.text-warning.fw-bold:hover {
         #gallery {
             text-align: center;
             padding: 60px 20px;
-            background: linear-gradient(to bottom, #0a0a0a, #111);
+            background: linear-gradient(to bottom, $color-fondo-secundario, $color-fondo-principal);
             color: white;
+        
+            .section-title {
+                font-size: 2.5rem;
+                color: $color-terciario;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        
+            .gallery-images {
+                figure {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 12px;
+                    box-shadow: $sombra-default;
+                    transition: transform 0.4s ease, box-shadow 0.4s ease;
+                }
+        
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                    transition: transform 0.4s ease;
+                }
+            }
         }
-
-        /* TÍTULO Y TEXTO */
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--color-terciario);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* IMÁGENES DE LA GALERÍA */
-        .gallery-images figure {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .gallery-images img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-            transition: transform 0.4s ease;
-        }
-
+        
         .flip-card {
             background-color: transparent;
             width: 300px;
@@ -648,18 +671,18 @@ section.text-center a.text-warning.fw-bold:hover {
             width: 80%;
             background: #222;
             border-radius: 5px;
-            color: var(--color-texto);
+            color: $color-texto;
         }
 
         .faq-question {
             font-size: 1.5rem;
-            color: var(--color-primario);
+            color:  $color-primario;
         }
 
         .faq-answer {
             font-size: 1rem;
             margin-top: 5px;
-            color: var(--color-secundario);
+            color: $color-secundario;
         }
 
         /* SECCIÓN CONTACTO */
@@ -675,14 +698,14 @@ section.text-center a.text-warning.fw-bold:hover {
             padding: 20px;
             background: #222;
             border-radius: 5px;
-            color: var(--color-texto);
+            color: $color-texto;
         }
 
         #contact-form label {
             display: block;
             margin: 10px 0 5px;
             font-size: 1rem;
-            color: var(--color-secundario);
+            color: $color-secundario;
         }
 
         #contact-form input,
@@ -699,7 +722,7 @@ section.text-center a.text-warning.fw-bold:hover {
         #contact-form button {
             margin-top: 15px;
             padding: 10px 20px;
-            background-color: var(--color-primario);
+            background-color:  $color-primario;
             color: #000;
             font-weight: bold;
             border-radius: 5px;
@@ -708,5 +731,5 @@ section.text-center a.text-warning.fw-bold:hover {
         }
 
         #contact-form button:hover {
-            background-color: var(--color-terciario);
+            background-color: $color-terciario;
         }

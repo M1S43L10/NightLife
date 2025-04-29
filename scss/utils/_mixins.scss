@@ -1,0 +1,30 @@
+// -------------------------------------------
+// Mixins globales NightLife
+// -------------------------------------------
+
+// Mixin para transiciones suaves
+@mixin transition($properties...) {
+    transition: $properties;
+  }
+  
+  // Mixin para media query de dispositivos móviles
+  @mixin mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  
+  // Mixin para media query de tablets
+  @mixin tablet {
+    @media (min-width: 769px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+  
+  // Mixin para media query de desktops
+  @mixin desktop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+  
