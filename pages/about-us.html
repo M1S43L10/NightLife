@@ -79,9 +79,9 @@
 
         <!-- SECCIÓN PRINCIPAL -->
         <section id="about" class="py-5 text-center">
-            <div class="container">
-                <h2 class="about-title mb-3">Sobre Nosotros</h2>
-                <p class="about-text">
+            <div class="container" data-aos="fade-up">
+                <h2 class="about-title" data-aos="fade-down">Sobre Nosotros</h2>
+                <p class="about-text" data-aos="fade-right" data-aos-delay="200">
                     En NightLife creemos que cada noche merece ser inolvidable.
                     Con una combinación de música,
                     ambiente y estilo, transformamos tus fines de semana en
@@ -90,48 +90,45 @@
             </div>
         </section>
 
-        <!-- EQUIPO -->
         <section class="bg-black py-5">
             <div class="container">
-                <div class="row justify-content-center g-4">
-
-                    <!-- Miembro 1 -->
-                    <div
-                        class="col-sm-6 col-md-4 d-flex justify-content-center">
-                        <div class="team-member text-center">
-                            <img src="../assets/DJ.png" alt="DJ Alex">
-                            <h3>DJ Alex</h3>
-                            <p>Especialista en beats electrónicos y creador del
-                                ambiente.</p>
+                <h2 class="text-center section-title" data-aos="fade-down">Nuestro Equipo</h2>
+        
+                <div class="d-flex justify-content-center">
+                    <div class="row g-4">
+                        <!-- Miembro 1 -->
+                        <div class="col-10 col-md-4 d-flex justify-content-center">
+                            <div class="team-member text-center tilt" data-aos="flip-left" data-aos-delay="100">
+                                <img src="../assets/DJ.png" alt="Foto de DJ Alex" class="img-fluid mb-3">
+                                <h3>DJ Alex</h3>
+                                <p>Especialista en beats electrónicos y creador del ambiente.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Miembro 2 -->
+                        <div class="col-10 col-md-4 d-flex justify-content-center">
+                            <div class="team-member text-center tilt" data-aos="flip-left" data-aos-delay="200">
+                                <img src="../assets/VJ.png" alt="Foto de VJ Carla" class="img-fluid mb-3">
+                                <h3>VJ Carla</h3>
+                                <p>Visuales impactantes y efectos que transforman la pista.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Miembro 3 -->
+                        <div class="col-10 col-md-4 d-flex justify-content-center">
+                            <div class="team-member text-center tilt" data-aos="flip-left" data-aos-delay="300">
+                                <img src="../assets/HOST.png" alt="Foto de Leo Host" class="img-fluid mb-3">
+                                <h3>Leo Host</h3>
+                                <p>El alma de la fiesta. Presentador y animador de lujo.</p>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Miembro 2 -->
-                    <div
-                        class="col-sm-6 col-md-4 d-flex justify-content-center">
-                        <div class="team-member text-center">
-                            <img src="../assets/VJ.png" alt="VJ Carla">
-                            <h3>VJ Carla</h3>
-                            <p>Visuales impactantes y efectos que transforman la
-                                pista.</p>
-                        </div>
-                    </div>
-
-                    <!-- Miembro 3 -->
-                    <div
-                        class="col-sm-6 col-md-4 d-flex justify-content-center">
-                        <div class="team-member text-center">
-                            <img src="../assets/HOST.png" alt="Leo Host">
-                            <h3>Leo Host</h3>
-                            <p>El alma de la fiesta. Presentador y animador de
-                                lujo.</p>
-                        </div>
-                    </div>
-
-                    <!-- Agrega más miembros si querés -->
                 </div>
             </div>
         </section>
+        
+        
+        
 
         <!-- FOOTER -->
         <footer class="bg-dark text-white py-5">
@@ -177,5 +174,13 @@
         <!-- Bootstrap JS -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Librerías JS para animaciones y efectos -->
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
+        <!-- Tu propio archivo de scripts -->
+        <script src="../js/scripts.js"></script>
+
     </body>
 </html>

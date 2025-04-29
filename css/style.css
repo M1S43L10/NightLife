@@ -355,6 +355,19 @@ section.text-center a.text-warning.fw-bold:hover {
   text-align: center;
 }
 
+#gallery img {
+  width: 100%;
+  height: 250px; /* Puedes ajustar este valor */
+  object-fit: cover;
+  border-radius: 10px; /* Opcional, si querés más curva */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Opcional, sombra extra */
+  transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+  transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
 /* SECCIÓN FAQ */
 #faq {
   text-align: center;

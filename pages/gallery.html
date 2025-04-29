@@ -14,6 +14,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../css/style.css" />
+    <!-- Fancybox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <!-- Librerías CSS para animaciones y efectos -->
   </head>
 
   <body class="bg-dark text-white">
@@ -82,192 +87,100 @@
     <!-- SECCIÓN GALERÍA -->
     <section id="gallery" class="py-5 text-center">
       <div class="container">
-        <h2 class="section-title">Galería</h2>
-        <p class="section-text">Revive los mejores momentos de nuestras fiestas
-          con imágenes exclusivas.</p>
+        <h2 class="section-title" data-aos="fade-down">Galería</h2>
+        <p class="section-text" data-aos="fade-up" data-aos-delay="100">
+          Revive los mejores momentos de nuestras fiestas con imágenes exclusivas.
+        </p>
 
-        <div class="row g-4 justify-content-center">
-
-          <!-- Tarjetas Flip (12) -->
-          <!-- Cada .flip-card va dentro de col-* -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery1.jpg"
-                    alt="Fiesta con luces de neón" />
-                </div>
-                <div class="flip-back">
-                  <h3>Fiesta con luces de neón ✨</h3>
-                  <p>Una noche inolvidable llena de energía.</p>
-                </div>
-              </div>
-            </div>
+        <div class="row g-4">
+          <!-- Imagen 1 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a data-fancybox="gallery" href="../assets/gallery1.jpg">
+              <img src="../assets/gallery1.jpg" alt="Fiesta con luces de neón" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery2.avif" alt="DJ en acción" />
-                </div>
-                <div class="flip-back">
-                  <h3>DJ en acción 🎧</h3>
-                  <p>Una noche inolvidable llena de energía.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 2 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+            <a data-fancybox="gallery" href="../assets/gallery2.avif">
+              <img src="../assets/gallery2.avif" alt="DJ en acción" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery3.jpeg" alt="Pista de baile" />
-                </div>
-                <div class="flip-back">
-                  <h3>Pista de baile llena 🔥</h3>
-                  <p>Una noche inolvidable llena de energía.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 3 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <a data-fancybox="gallery" href="../assets/gallery3.jpeg">
+              <img src="../assets/gallery3.jpeg" alt="Pista de baile llena" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery4.jpg" alt="Show de luces" />
-                </div>
-                <div class="flip-back">
-                  <h3>Increíble show de luces 🎆</h3>
-                  <p>Una noche inolvidable llena de energía.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 4 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+            <a data-fancybox="gallery" href="../assets/gallery4.jpg">
+              <img src="../assets/gallery4.jpg" alt="Show de luces" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery5.jpg" alt="Ambiente festivo" />
-                </div>
-                <div class="flip-back">
-                  <h3>Ambiente festivo y diversión 🍾</h3>
-                  <p>Una noche inolvidable llena de energía.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 5 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+            <a data-fancybox="gallery" href="../assets/gallery5.jpg">
+              <img src="../assets/gallery5.jpg" alt="Ambiente festivo" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery6.jpg"
-                    alt="Personas disfrutando la fiesta" />
-                </div>
-                <div class="flip-back">
-                  <h3>Personas disfrutando la fiesta 🕺💃</h3>
-                  <p>Una noche inolvidable llena de energía.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 6 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
+            <a data-fancybox="gallery" href="../assets/gallery6.jpg">
+              <img src="../assets/gallery6.jpg" alt="Personas disfrutando la fiesta" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery7.png"
-                    alt="Explosión de beats 🎧" />
-                </div>
-                <div class="flip-back">
-                  <h3>Explosión de beats 🎧</h3>
-                  <p>Una noche encendida con luces pulsantes y un DJ al
-                    mando.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 7 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+            <a data-fancybox="gallery" href="../assets/gallery7.png">
+              <img src="../assets/gallery7.png" alt="Explosión de beats" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery8.png"
-                    alt="Ritmo y conexión 💃🕺" />
-                </div>
-                <div class="flip-back">
-                  <h3>Ritmo y conexión 💃🕺</h3>
-                  <p>Cuando la música une, todo lo demás desaparece.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 8 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="450">
+            <a data-fancybox="gallery" href="../assets/gallery8.png">
+              <img src="../assets/gallery8.png" alt="Ritmo y conexión" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery9.png" alt="Frecuencia total 🔊" />
-                </div>
-                <div class="flip-back">
-                  <h3>Frecuencia total 🔊</h3>
-                  <p>Cada mezcla es una obra de arte hecha en tiempo real.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 9 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
+            <a data-fancybox="gallery" href="../assets/gallery9.png">
+              <img src="../assets/gallery9.png" alt="Frecuencia total" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery10.png"
-                    alt="Momentos NightLife ✨" />
-                </div>
-                <div class="flip-back">
-                  <h3>Momentos NightLife ✨</h3>
-                  <p>Fiesta, amor, ritmo y magia en una sola imagen.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 10 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="550">
+            <a data-fancybox="gallery" href="../assets/gallery10.png">
+              <img src="../assets/gallery10.png" alt="Momentos NightLife" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery11.png"
-                    alt="El poder del escenario 🔥" />
-                </div>
-                <div class="flip-back">
-                  <h3>El poder del escenario 🔥</h3>
-                  <p>Un mar de manos alzadas y emoción al máximo.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 11 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+            <a data-fancybox="gallery" href="../assets/gallery11.png">
+              <img src="../assets/gallery11.png" alt="El poder del escenario" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="flip-card">
-              <div class="flip-inner">
-                <div class="flip-front">
-                  <img src="../assets/gallery12.png" alt="Vibra acústica 🎸" />
-                </div>
-                <div class="flip-back">
-                  <h3>Vibra acústica 🎸</h3>
-                  <p>Una experiencia íntima con talento en vivo.</p>
-                </div>
-              </div>
-            </div>
+          <!-- Imagen 12 -->
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="650">
+            <a data-fancybox="gallery" href="../assets/gallery12.png">
+              <img src="../assets/gallery12.png" alt="Vibra acústica" class="img-fluid rounded shadow-sm" />
+            </a>
           </div>
-
+          
         </div>
       </div>
     </section>
+
 
     <!-- FOOTER -->
     <footer class="bg-black text-white py-5">
@@ -310,5 +223,17 @@
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Librerías JS para animaciones y efectos -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <!-- Fancybox JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <!-- Tu propio archivo de scripts -->
+    <script src="../js/scripts.js"></script>
+
   </body>
 </html>
